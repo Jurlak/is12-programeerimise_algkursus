@@ -27,7 +27,7 @@ x=len(cardb)
 
 def add():
 	if kys=='add':
-		cardb.insert(x,[raw_input("Sisestage automark: "), raw_input("Sisestage auto mudel: "), raw_input("Sisestage bensiiniliik: ")]) 
+		cardb.insert(x,[raw_input("Sisestage automark: "), raw_input("Sisestage auto mudel: "), raw_input("Sisestage kütuse liik: ")]) 
 
 add()
 
