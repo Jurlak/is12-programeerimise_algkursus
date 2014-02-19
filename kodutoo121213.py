@@ -7,7 +7,7 @@ def ruut(v, r):
 			x=0
 			y = y + 1
 			if x < r:
-					print (r * "#")
+					print (r * "# ")
 			else:
 					print ""		
 print ruut(10, 10)			
