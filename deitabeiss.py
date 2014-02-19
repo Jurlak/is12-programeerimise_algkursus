@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 import sys
 
-
-
 print "add- lisab andmebaasi masiivi"
 print "rm- eemaldab masiivist teatud rea"
 print "ls- kuvatakse andmebaas"
@@ -15,31 +13,34 @@ kys= raw_input("valige endale sobiv varjant: ")
 cardb= [
 
 
+
 ['VW', 'Phaeton', 'diisel'],
 ['BMW', '750', 'bensiin'],
 ['Volvo', 'S80', 'diisel'],
 ['Audi', 'A7', 'diisel'],
-['Mercedes-Benz', 'SL 500', 'diisel'],
+['Mercedes-Benz', 'SL 500', 'diisel']
 ]
 
-x=len(cardb)
 
+	
+x=len(cardb)
 
 def add():
 	if kys=='add':
 		cardb.insert(x,[raw_input("Sisestage automark: "), raw_input("Sisestage auto mudel: "), raw_input("Sisestage kütuse liik: ")]) 
-
 add()
 
 def rm():
 	if kys=='rm':
-		print cardb
+		for element in cardb:
+			print element
 		cardb.pop(int(raw_input("sisestage number 0-..., et mõni automark eemaldada: ")))
 rm()
 
 def ls():
 	if kys=='ls':
-		print cardb
+		for element in cardb:
+			print element
 ls()		
 
 def quit():
