@@ -2,38 +2,21 @@
 # -*- coding: utf-8 -*-
 import sys
 
-
-
-
-
-
-cardb= [
-
-
-['VW', 'Phaeton', 'diisel'],
-['BMW', '750', 'bensiin'],
-['Volvo', 'S80', 'diisel'],
-['Audi', 'A7', 'diisel'],
-['Mercedes-Benz', 'SL 500', 'diisel'],
-]
-
-x=len(cardb)
-
+cardb= { 'auto mark' : 'VW', 'auto mudel' : 'Phaeton', 'kytuse liik' : 'diisel', }
 
 def add():
-		cardb.insert(x,[raw_input("Sisestage automark: "), raw_input("Sisestage auto mudel: "), raw_input("Sisestage kütuse liik: ")]) 
+	print cardb.keys()
+	cardb[raw_input('kirjutage mingi omadus: ')]=raw_input('kirjutage omadusele vastav tekst')
 
 def rm():
-		for element in cardb:
-			print element
-		cardb.pop(int(raw_input("sisestage number 0-..., et mõni automark eemaldada: ")))
+	print cardb.keys() 
+	del cardb[raw_input('valige ja kirjutage: ')]
 
 def ls():
-		for element in cardb:
-			print element		
+	print cardb		
 
 def quit():
-		sys.exit(0)
+	sys.exit()
 
 while True:
 		print " "
